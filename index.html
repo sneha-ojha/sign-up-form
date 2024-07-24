@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+  </head>
+  <body>
+    <style>
+        @font-face {
+  font-family: "Norse";
+  src: url(./fonts/Norse-Bold.otf);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin: 0;
+}
+
+.sidebar-section {
+  width: 35%;
+  background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+.sidebar-section > div {
+  width: 100%;
+  height: 15%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Norse", sans-serif;
+  font-size: 4.5rem;
+  position: relative;
+  top: 22%;
+}
+
+.sidebar-section > div > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.main-content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafc;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 45px;
+  height: 35%;
+  box-sizing: border-box;
+}
+
+.information > p {
+  font-weight: bold;
+  max-width: 50ch;
+  margin: 5px;
+  font-size: 1.1rem;
+  font-family: Roboto, sans-serif;
+}
+
+.main-content > form {
+  height: 65%;
+}
+
+fieldset {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  padding: 16px 45px;
+  height: 45%;
+  background-color: white;
+  border: 0;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+fieldset > p {
+  font-weight: 700;
+}
+
+.input-container {
+  padding-top: 5px;
+  display: flex;
+  gap: 6%;
+  height: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 26%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  font-size: 0.6rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+input {
+  width: 100%;
+  height: 26px;
+  border: 1px solid #e5e7eb;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.submit-section {
+  margin: 32px 45px;
+}
+
+.submit-section > p {
+  margin-top: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+button {
+  border: 0;
+  width: 190px;
+  height: 45px;
+  border-radius: 6px;
+  background-color: #596d48;
+  color: white;
+  font-size: 0.7rem;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+}
+
+a {
+  color: #596d48;
+  font-size: 0.7rem;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+input:focus-visible {
+  border: 1px solid blue;
+  border-radius: 3px;
+  outline: none !important;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type=password]:invalid:focus {
+  border: 1px solid red;
+  border-radius: 3px;
+}
+
+    </style>
+    <div class="sidebar-section">
+      <div>
+        <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="img" />
+        ODIN
+
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="information">
+        <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign Up <em>now</em> to get started.</p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <form action="post">
+        <fieldset>
+          <p>Let's do this!</p>
+          <div class="input-container">
+            <div class="form-group">
+              <div class="form-field">
+                <label for="firstName">FIRST NAME</label>
+                <input type="text" name="firstName" id="firstName" required />
+              </div>
+              <div class="form-field">
+                <label for="emailAddress">EMAIL</label>
+                <input type="email" name="emailAddress" id="emailAddress" required />
+              </div>
+              <div class="form-field">
+                <label for="password">PASSWORD</label>
+                <input type="password" name="password" id="password" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-field">
+                <label for="lastName">LAST NAME</label>
+                <input type="text" name="lastName" id="lastName" required />
+              </div>
+              <div class="form-field">
+                <label for="phoneNumber">PHONE NUMBER</label>
+                <input type="tel" name="phoneNumber" id="phoneNumber" required />
+              </div>
+              <div class="form-field">
+                <label for="confirmPassword">CONFIRM PASSWORD</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" required />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="submit-section">
+          <button type="submit">Create Account</button>
+          <p>Already have an account? <a href="">Log in</a></p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
